@@ -12,7 +12,7 @@ describe './lib/tic_tac_toe.rb' do
       expect(WIN_COMBINATIONS).to include([1,4,7])
       expect(WIN_COMBINATIONS).to include([2,5,8])
       expect(WIN_COMBINATIONS).to include([0,4,8])
-      expect(WIN_COMBINATIONS).to include([6,4,2])
+      expect(WIN_COMBINATIONS).to include([2,4,6])
     end
   end
 
@@ -44,10 +44,10 @@ describe './lib/tic_tac_toe.rb' do
   describe '#move' do
     it 'allows "X" player in the bottom right and "O" in the top left ' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-      move(board, 1, "O")
-      move(board, 9, "X")
+      move(board, 1, "X")
+      move(board, 9, "O")
 
-      expect(board).to eq(["O", " ", " ", " ", " ", " ", " ", " ", "X"])
+      expect(board).to eq(["X", " ", " ", " ", " ", " ", " ", " ", "O"])
     end
   end
 
